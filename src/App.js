@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Wrapper from "./components/Wrapper"
 import Card from "./components/Card"
 import cards from "./cards.json"
+import Jumbotron from "./components/Jumbotron"
 
 class App extends Component {
 
@@ -49,7 +50,11 @@ clickCount = (id) => {
     return (
     <Wrapper>
       <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game!</Header>
+      
+      <Jumbotron/>
+      
       {this.state.cards.map(card => (
+        
           <Card
             clickCount={this.clickCount}
             id={card.id}

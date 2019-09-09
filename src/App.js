@@ -52,7 +52,7 @@ clickCount = (id) => {
       <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game!</Header>
       
       <Jumbotron/>
-      
+      <div className = "cardContainer">
       {this.state.cards.map(card => (
         
           <Card
@@ -62,6 +62,7 @@ clickCount = (id) => {
             image={card.image}
           />
       ))}
+      </div>
     </Wrapper>
     );
   }
